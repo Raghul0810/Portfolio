@@ -532,6 +532,23 @@ header .navbar ul li a:hover {
 /* skills media queries ends*/
 /* skills section ends */
 
+/* ===== Custom Image Styling ===== */
+
+.home .image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.about .image img {
+  width: 300px;
+  border-radius: 1rem;
+  filter: grayscale(100%);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
 /* education section starts */
 .education {
   background: #e5ecfb;
