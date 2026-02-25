@@ -1,149 +1,241 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raghul Mohanraj | Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0f172a;
-      color: #f1f5f9;
-      line-height: 1.6;
-    }
-    header {
-      position: fixed;
-      width: 100%;
-      background: #0f172a;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #1e293b;
-      z-index: 1000;
-    }
-    header a {
-      color: #f1f5f9;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
-    header a:hover { color: #38bdf8; }
-    section {
-      padding: 100px 40px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1, h2, h3 { color: #38bdf8; }
-    .hero {
-      text-align: center;
-      padding-top: 150px;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      border: 1px solid #38bdf8;
-      color: #38bdf8;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #38bdf8;
-      color: #0f172a;
-    }
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 40px;
-      border-top: 1px solid #1e293b;
-      font-size: 14px;
-    }
-    html { scroll-behavior: smooth; }
-  </style>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Raghul Mohanraj | Production Support Manager</title>
+
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+<style>
+:root{
+  --brand:#38bdf8;
+  --bg:#0b1220;
+}
+
+body{
+  background:
+    radial-gradient(1000px 600px at 10% 0%, rgba(56,189,248,.15), transparent 60%),
+    radial-gradient(900px 600px at 90% 10%, rgba(99,102,241,.10), transparent 60%),
+    var(--bg) !important;
+}
+
+header{
+  background: rgba(11,18,32,.75) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.heading span{
+  color: var(--brand) !important;
+}
+
+.home .image img{
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <strong>Raghul</strong>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<a href="#home" class="logo"><i class="fas fa-server"></i> Raghul</a>
+<div id="menu" class="fas fa-bars"></div>
+<nav class="navbar">
+<ul>
+<li><a class="active" href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#certifications">Certifications</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 </header>
 
-<section class="hero">
-  <h1>Hello, I'm</h1>
-  <h1>Raghul</h1>
-  <h3>Production Support Manager - Technical Operations</h3>
-  <a href="#contact" class="btn">Get In Touch</a>
+<!-- HERO -->
+<section class="home" id="home">
+<div id="particles-js"></div>
+
+<div class="content">
+<h2>Hello, I'm <br> Raghul <span>Mohanraj</span></h2>
+<p><span class="typing-text"></span></p>
+
+<a href="#contact" class="btn">
+<span>Get In Touch</span>
+<i class="fas fa-paper-plane"></i>
+</a>
+</div>
+
+<div class="image">
+<img draggable="false" class="tilt" src="./assets/images/hero.png" alt="Raghul Mohanraj">
+</div>
 </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I'm a Technical Operations Leader focused on driving operational excellence and ensuring product stability across fast-paced SaaS environments — Turning Ops into Growth Engine.
-  </p>
-  <p>
-    At the intersection of Technical Operations, Production Support, and Continuous Improvement, I specialize in transforming operational challenges into growth opportunities. My focus lies in building scalable solutions, optimising workflows, fostering collaboration that enhances system reliability and team efficiency — driving reliable feature launches with data-backed validation and benchmarking.
-  </p>
-  <p>
-    I thrive on complex troubleshooting, cross-functional collaboration, and process automation, combining deep technical knowledge with strategic thinking to deliver scalable, reliable systems.
-  </p>
+<!-- ABOUT -->
+<section class="about" id="about">
+<h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+
+<div class="row">
+<div class="image">
+<img draggable="false" class="tilt" src="./assets/images/hero.png">
+</div>
+
+<div class="content">
+<h3>Production Support Manager • Technical Operations</h3>
+
+<p>
+I'm a Technical Operations Leader focused on driving operational excellence and ensuring product stability across fast-paced SaaS environments — Turning Ops into Growth Engine.
+</p>
+
+<p>
+I specialize in incident management, SLA/KPI ownership, root cause analysis, data validation, benchmarking, and partnering closely with Engineering for reliable feature rollouts.
+</p>
+
+<p>
+I thrive on complex troubleshooting, cross-functional collaboration, and process automation that improves system reliability and operational efficiency.
+</p>
+
+</div>
+</div>
 </section>
 
-<section id="experience">
-  <h2>Professional Experience</h2>
-  <div class="card">
-    <h3>Production Support Manager – Everstage</h3>
-    <p><em>Dec 2024 – Present | Coimbatore</em></p>
-    <p>Leading production support, benchmarking, performance profiling, feature rollouts, SLA/KPI management, process optimization, and stakeholder communication.</p>
-  </div>
-  <div class="card">
-    <h3>Product Associate – Athenahealth</h3>
-    <p><em>Aug 2024 – Dec 2024 | Chennai</em></p>
-    <p>Managed KPIs, SLAs, escalations, operational improvements, and cross-functional collaboration for service excellence.</p>
-  </div>
+<!-- SKILLS -->
+<section class="skills" id="skills">
+<h2 class="heading"><i class="fas fa-tools"></i> Skills & <span>Tools</span></h2>
+
+<div id="skillsGrid" style="max-width:1000px;margin:40px auto;">
+Loading skills...
+</div>
 </section>
 
-<section id="skills">
-  <h2>Skills & Tools</h2>
-  <div class="card">
-    <p><strong>Monitoring & Debugging:</strong> Datadog, Grafana, Sentry, FullStory</p>
-    <p><strong>Data & API:</strong> Snowflake, PostgreSQL, Postman</p>
-    <p><strong>Tools:</strong> JIRA, Confluence, Salesforce</p>
-    <p><strong>Core Strengths:</strong> Incident Response, Debugging, API Testing, Process Automation, Cross-functional Collaboration</p>
-  </div>
+<!-- CERTIFICATIONS -->
+<section class="education" id="certifications">
+<h2 class="heading"><i class="fas fa-certificate"></i> Certifi<span>cations</span></h2>
+
+<div class="box-container">
+
+<div class="box">
+<h3>Managing Project Stakeholders</h3>
+<p>LinkedIn • Oct 2023</p>
+</div>
+
+<div class="box">
+<h3>Project Management Foundation (PMI)</h3>
+<p>Oct 2023</p>
+</div>
+
+<div class="box">
+<h3>Copilot for Service</h3>
+<p>LinkedIn • Nov 2024</p>
+</div>
+
+<div class="box">
+<h3>Power BI Essential Training</h3>
+<p>LinkedIn • Aug 2024</p>
+</div>
+
+</div>
 </section>
 
-<section id="education">
-  <h2>Education</h2>
-  <div class="card">
-    <h3>Bachelor of Engineering</h3>
-    <p>PSG College of Technology (2014 – 2018)</p>
-  </div>
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+<h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
+
+<div class="timeline">
+
+<div class="container right">
+<div class="content">
+<h3>Everstage</h3>
+<p>Production Support Manager • Dec 2024 – Present</p>
+</div>
+</div>
+
+<div class="container left">
+<div class="content">
+<h3>athenahealth</h3>
+<p>Product Associate & Senior Product Analyst • 2020 – 2024</p>
+</div>
+</div>
+
+<div class="container right">
+<div class="content">
+<h3>SPIN Technologies</h3>
+<p>Product Analyst • 2019 – 2020</p>
+</div>
+</div>
+
+<div class="container left">
+<div class="content">
+<h3>Accenture</h3>
+<p>Associate Software Engineer • 2018 – 2019</p>
+</div>
+</div>
+
+</div>
 </section>
 
-<section id="contact">
-  <h2>Let's Connect</h2>
-  <p>Interested in SaaS operations, production support strategies, or collaboration?</p>
-  <a href="mailto:raghulmkrmech@gmail.com" class="btn">Send Email</a>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+<div style="text-align:center;">
+<a href="mailto:raghulmkrmech@gmail.com" class="btn">
+<span>Send Email</span>
+<i class="fas fa-envelope"></i>
+</a>
+</div>
 </section>
 
-<footer>
-  © 2024 Raghul Mohanraj. All rights reserved.
-</footer>
+<!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
+<script src="./assets/js/particles.min.js"></script>
+<script src="./assets/js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="./assets/js/script.js"></script>
+
+<!-- TYPING FIX -->
+<script>
+new Typed(".typing-text", {
+  strings: [
+    "Production Support Manager",
+    "Technical Operations Leader",
+    "SaaS Reliability Specialist",
+    "Incident Management • RCA • Automation"
+  ],
+  loop: true,
+  typeSpeed: 60,
+  backSpeed: 30,
+  backDelay: 1500
+});
+</script>
+
+<!-- SKILLS DYNAMIC LOAD -->
+<script>
+fetch("./skills.json")
+.then(res => res.json())
+.then(data => {
+  const grid = document.getElementById("skillsGrid");
+  grid.innerHTML = "";
+
+  Object.keys(data).forEach(category => {
+    const div = document.createElement("div");
+    div.className = "box";
+    div.innerHTML = "<h3>"+category+"</h3><p>"+data[category].join(", ")+"</p>";
+    grid.appendChild(div);
+  });
+})
+.catch(() => {
+  document.getElementById("skillsGrid").innerHTML =
+    "Make sure skills.json exists in your repo root.";
+});
+</script>
 
 </body>
 </html>
