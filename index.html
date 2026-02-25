@@ -218,7 +218,7 @@ new Typed(".typing-text", {
 
 <!-- SKILLS DYNAMIC LOAD -->
 <script>
-fetch("./skills.json")
+fetch("/Portfolio/skills.json")
 .then(res => res.json())
 .then(data => {
   const grid = document.getElementById("skillsGrid");
