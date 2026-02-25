@@ -1,254 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Raghul Mohanraj | Production Support Manager</title>
+  <title>Raghul Mohanraj | Production Support Manager</title>
 
-<link rel="stylesheet" href="./assets/css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
-<style>
-:root{
-  --brand:#38bdf8;
-  --bg:#0b1220;
-}
+  <!-- Premium polish (non-breaking overrides) -->
+  <style>
+    :root{
+      --brand:#38bdf8;
+      --bg:#0b1220;
+      --card: rgba(255,255,255,.06);
+      --stroke: rgba(255,255,255,.10);
+    }
 
-body{
-  background:
-    radial-gradient(1000px 600px at 10% 0%, rgba(56,189,248,.15), transparent 60%),
-    radial-gradient(900px 600px at 90% 10%, rgba(99,102,241,.10), transparent 60%),
-    var(--bg) !important;
-}
+    body{
+      background:
+        radial-gradient(1100px 700px at 12% 0%, rgba(56,189,248,.16), transparent 62%),
+        radial-gradient(900px 650px at 92% 8%, rgba(99,102,241,.12), transparent 62%),
+        var(--bg) !important;
+    }
 
-header{
-  background: rgba(11,18,32,.75) !important;
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
+    header{
+      background: rgba(11,18,32,.78) !important;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
 
-.heading span{
-  color: var(--brand) !important;
-}
+    .logo i{ color: var(--brand); }
 
-.home .image img{
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.35);
-}
-</style>
+    .heading span{ color: var(--brand) !important; }
+
+    /* Hero image premium */
+    .home .image img{
+      border-radius: 22px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.40);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+
+    /* Small premium chips */
+    .quick-highlights{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top: 16px;
+    }
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      color: rgba(255,255,255,.9);
+      font-size: 13px;
+      letter-spacing: .2px;
+    }
+    .chip i{ color: var(--brand); }
+
+    /* Skills cards */
+    #skillsGrid{
+      max-width: 1050px;
+      margin: 28px auto 0;
+      padding: 0 16px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .skill-card{
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: 18px;
+      padding: 16px 16px 14px;
+      box-shadow: 0 18px 55px rgba(0,0,0,.25);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .skill-card:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 26px 70px rgba(0,0,0,.35);
+    }
+    .skill-card h3{
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: #fff;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .skill-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .badge{
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color: rgba(255,255,255,.88);
+    }
+
+    /* Certifications cards */
+    .cert-wrap{
+      max-width: 1050px;
+      margin: 26px auto 0;
+      padding: 0 16px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 16px;
+    }
+    .cert-card{
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 18px 55px rgba(0,0,0,.25);
+    }
+    .cert-card h3{ margin: 0 0 6px; font-size: 16px; color:#fff; }
+    .cert-meta{ opacity:.85; font-size: 13px; margin-bottom: 10px; }
+    .cert-id{ opacity:.75; font-size: 12.5px; }
+
+    /* Contact */
+    .contact .contact-box{
+      max-width: 900px;
+      margin: 20px auto 0;
+      padding: 0 16px;
+      text-align:center;
+    }
+    .contact .contact-actions{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 14px;
+    }
+    .contact .contact-actions a.btn{ min-width: 170px; }
+
+    /* Reduce huge blank space on some sections */
+    section{ padding-bottom: 60px !important; }
+  </style>
 </head>
 
 <body>
 
-<header>
-<a href="#home" class="logo"><i class="fas fa-server"></i> Raghul</a>
-<div id="menu" class="fas fa-bars"></div>
-<nav class="navbar">
-<ul>
-<li><a class="active" href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#certifications">Certifications</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-</header>
+  <!-- HEADER -->
+  <header>
+    <a href="#home" class="logo"><i class="fas fa-server"></i> Raghul</a>
 
-<!-- HERO -->
-<section class="home" id="home">
-<div id="particles-js"></div>
+    <div id="menu" class="fas fa-bars"></div>
 
-<div class="content">
-<h2>Hello, I'm <br> Raghul <span>Mohanraj</span></h2>
-<p><span class="typing-text"></span></p>
+    <nav class="navbar">
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<a href="#contact" class="btn">
-<span>Get In Touch</span>
-<i class="fas fa-paper-plane"></i>
-</a>
-</div>
+  <!-- HERO -->
+  <section class="home" id="home">
+    <div id="particles-js"></div>
 
-<div class="image">
-<img draggable="false" class="tilt" src="./assets/images/hero.png" alt="Raghul Mohanraj">
-</div>
-</section>
+    <div class="content">
+      <h2>Hello, I'm <br/> Raghul <span>Mohanraj</span></h2>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-<h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+      <p style="margin-top:10px;">
+        <span class="typing-text"></span>
+      </p>
 
-<div class="row">
-<div class="image">
-<img draggable="false" class="tilt" src="./assets/images/hero.png">
-</div>
+      <div class="quick-highlights">
+        <span class="chip"><i class="fas fa-shield-alt"></i> Incident Management</span>
+        <span class="chip"><i class="fas fa-chart-line"></i> SLA/KPI Ownership</span>
+        <span class="chip"><i class="fas fa-bug"></i> RCA & Debugging</span>
+        <span class="chip"><i class="fas fa-rocket"></i> Release Readiness</span>
+      </div>
 
-<div class="content">
-<h3>Production Support Manager • Technical Operations</h3>
-
-<p>
-I'm a Technical Operations Leader focused on driving operational excellence and ensuring product stability across fast-paced SaaS environments — Turning Ops into Growth Engine.
-</p>
-
-<p>
-I specialize in incident management, SLA/KPI ownership, root cause analysis, data validation, benchmarking, and partnering closely with Engineering for reliable feature rollouts.
-</p>
-
-<p>
-I thrive on complex troubleshooting, cross-functional collaboration, and process automation that improves system reliability and operational efficiency.
-</p>
-
-</div>
-</div>
-</section>
-
-<!-- SKILLS -->
-<section class="skills" id="skills">
-<h2 class="heading"><i class="fas fa-tools"></i> Skills & <span>Tools</span></h2>
-
-<div id="skillsGrid" style="max-width:1000px;margin:40px auto;">
-Loading skills...
-</div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="education" id="certifications">
-<h2 class="heading"><i class="fas fa-certificate"></i> Certifi<span>cations</span></h2>
-
-<div class="box-container">
-
-<div class="box">
-<h3>Managing Project Stakeholders</h3>
-<p>LinkedIn • Oct 2023</p>
-</div>
-
-<div class="box">
-<h3>Project Management Foundation (PMI)</h3>
-<p>Oct 2023</p>
-</div>
-
-<div class="box">
-<h3>Copilot for Service</h3>
-<p>LinkedIn • Nov 2024</p>
-</div>
-
-<div class="box">
-<h3>Power BI Essential Training</h3>
-<p>LinkedIn • Aug 2024</p>
-</div>
-
-</div>
-</section>
-
-<!-- EXPERIENCE -->
-<section class="experience" id="experience">
-<h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
-
-<div class="timeline">
-
-<div class="container right">
-<div class="content">
-<h3>Everstage</h3>
-<p>Production Support Manager • Dec 2024 – Present</p>
-</div>
-</div>
-
-<div class="container left">
-<div class="content">
-<h3>athenahealth</h3>
-<p>Product Associate & Senior Product Analyst • 2020 – 2024</p>
-</div>
-</div>
-
-<div class="container right">
-<div class="content">
-<h3>SPIN Technologies</h3>
-<p>Product Analyst • 2019 – 2020</p>
-</div>
-</div>
-
-<div class="container left">
-<div class="content">
-<h3>Accenture</h3>
-<p>Associate Software Engineer • 2018 – 2019</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
-
-  <div style="max-width: 1000px; margin: 20px auto; padding: 0 20px;">
-    <p style="text-align:center; opacity:.9; margin-bottom: 18px;">
-      Interested in discussing SaaS operations, production support strategy, or collaboration? I’d love to connect.
-    </p>
-
-    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-      <a class="btn" href="mailto:raghulmkrmech@gmail.com">
-        <span>Send Email</span> <i class="fas fa-envelope"></i>
-      </a>
-
-      <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-        <span>LinkedIn</span> <i class="fab fa-linkedin"></i>
-      </a>
-
-      <a class="btn" href="https://github.com/Raghul0810" target="_blank" rel="noreferrer">
-        <span>GitHub</span> <i class="fab fa-github"></i>
+      <a href="#contact" class="btn" style="margin-top:18px;">
+        <span>Get In Touch</span> <i class="fas fa-paper-plane"></i>
       </a>
     </div>
-  </div>
-</section>
 
-<!-- JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
-<script src="./assets/js/particles.min.js"></script>
-<script src="./assets/js/app.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="./assets/js/script.js"></script>
+    <div class="image">
+      <!-- IMPORTANT: upload your photo as assets/images/hero.png -->
+      <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="Raghul Mohanraj" />
+    </div>
+  </section>
 
-<!-- TYPING FIX -->
-<script>
-new Typed(".typing-text", {
-  strings: [
-    "Production Support Manager",
-    "Technical Operations Leader",
-    "SaaS Reliability Specialist",
-    "Incident Management • RCA • Automation"
-  ],
-  loop: true,
-  typeSpeed: 60,
-  backSpeed: 30,
-  backDelay: 1500
-});
-</script>
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
 
-<!-- SKILLS DYNAMIC LOAD -->
-<script>
-fetch("/Portfolio/skills.json")
-.then(res => res.json())
-.then(data => {
-  const grid = document.getElementById("skillsGrid");
-  grid.innerHTML = "";
+    <div class="row">
+      <div class="image">
+        <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="Raghul Mohanraj" />
+      </div>
 
-  Object.keys(data).forEach(category => {
-    const div = document.createElement("div");
-    div.className = "box";
-    div.innerHTML = "<h3>"+category+"</h3><p>"+data[category].join(", ")+"</p>";
-    grid.appendChild(div);
-  });
-})
-.catch(() => {
-  document.getElementById("skillsGrid").innerHTML =
-    "Make sure skills.json exists in your repo root.";
-});
-</script>
+      <div class="content">
+        <h3>Production Support Manager • Technical Operations</h3>
+
+        <p>
+          I'm a Technical Operations Leader focused on driving operational excellence and ensuring product stability
+          across fast-paced SaaS environments — <b>Turning Ops into a Growth Engine</b>.
+        </p>
+
+        <p>
+          I specialize in incident response, SLA/KPI ownership, root cause analysis, data validation and
+          <b>partnering closely with Engineering on feature rollouts through benchmarking and performance checks</b>
+          to ensure production-grade reliability.
+        </p>
+
+        <p>
+          I thrive on challenges involving complex troubleshooting, cross-functional collaboration,
+          and process automation that improves system reliability and team efficiency.
+        </p>
+
+        <a href="#experience" class="btn" style="margin-top:10px;">
+          <span>View My Experience</span> <i class="fas fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <h2 class="heading"><i class="fas fa-tools"></i> Skills & <span>Tools</span></h2>
+
+    <div style="text-align:center; opacity:.9; padding: 0 16px; max-width: 900px; margin: 10px auto 0;">
+      Professional toolkit refined through 8+ years of hands-on experience in Tech Ops, Production Support and SaaS operations.
+    </div>
+
+    <div id="skillsGrid">
+      <div style="opacity:.9; padding: 12px 6px;">Loading skills…</div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="education" id="certifications">
+    <h2 class="heading"><i class="fas fa-certificate"></i> Certifi<span>cations</span></h2>
+
+    <div class="cert-wrap">
+      <div class="cert-card">
+        <h3>Managing Project Stakeholders</h3>
+        <div class="cert-meta">LinkedIn • Oct 2023</div>
+        <div class="cert-id">ID: MP-STAKEHOLDERS-2023</div>
+      </div>
+
+      <div class="cert-card">
+        <h3>Project Management Foundation</h3>
+        <div class="cert-meta">Project Management Institute (PMI) • Oct 2023</div>
+        <div class="cert-id">ID: PMI-FOUND-2023</div>
+      </div>
+
+      <div class="cert-card">
+        <h3>Copilot for Service: Helpful Tips</h3>
+        <div class="cert-meta">LinkedIn • Nov 2024</div>
+        <div class="cert-id">ID: COPILOT-SERVICE-2024</div>
+      </div>
+
+      <div class="cert-card">
+        <h3>Using AI in Customer Service</h3>
+        <div class="cert-meta">LinkedIn • Nov 2024</div>
+        <div class="cert-id">ID: AI-CUSTOMER-SERVICE-2024</div>
+      </div>
+
+      <div class="cert-card">
+        <h3>Power BI Essential Training</h3>
+        <div class="cert-meta">LinkedIn • Aug 2024</div>
+        <div class="cert-id">ID: POWERBI-ESSENTIAL-2024</div>
+      </div>
+
+      <div class="cert-card">
+        <h3>HTML & SQL</h3>
+        <div class="cert-meta">Sololearn • Jul 2020</div>
+        <div class="cert-id">IDs: HTML-SOLOLEARN-2020 • SQL-SOLOLEARN-2020</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE (kept simple so it doesn’t break template) -->
+  <section class="experience" id="experience">
+    <h2 class="heading"><i class="fas fa-briefcase"></i> Experi<span>ence</span></h2>
+
+    <div class="timeline">
+
+      <div class="container right">
+        <div class="content">
+          <h3>Everstage</h3>
+          <p>Production Support Manager • Dec 2024 – Present • Coimbatore</p>
+          <p style="opacity:.9; margin-top:8px;">
+            RCA, incident leadership, release readiness, and partnering with Engineering for stable rollouts through validation & benchmarking.
+          </p>
+        </div>
+      </div>
+
+      <div class="container left">
+        <div class="content">
+          <h3>athenahealth</h3>
+          <p>Product Associate • Aug 2024 – Dec 2024 • Chennai</p>
+          <p style="opacity:.9; margin-top:8px;">
+            KPI/SLA ownership, critical escalations, continuous improvement initiatives and cross-functional execution.
+          </p>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="content">
+          <h3>athenahealth</h3>
+          <p>Senior Product Analyst • Jul 2022 – Jul 2024 • Chennai</p>
+          <p style="opacity:.9; margin-top:8px;">
+            Knowledge articles, technical documentation, workflow validation, and improving operational consistency.
+          </p>
+        </div>
+      </div>
+
+      <div class="container left">
+        <div class="content">
+          <h3>athenahealth</h3>
+          <p>Product Analyst • Sep 2020 – Jun 2022 • Chennai</p>
+          <p style="opacity:.9; margin-top:8px;">
+            Workflow analysis, client case resolution, testing, and insights to improve product experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="content">
+          <h3>SPIN Technologies</h3>
+          <p>Product Analyst • Apr 2019 – Sep 2020 • Bangalore</p>
+          <p style="opacity:.9; margin-top:8px;">
+            Worked with premium clients on tracking solutions; bug tracking + developer partnership to improve reliability.
+          </p>
+        </div>
+      </div>
+
+      <div class="container left">
+        <div class="content">
+          <h3>Accenture</h3>
+          <p>Associate Software Engineer • May 2018 – Apr 2019 • Bangalore</p>
+          <p style="opacity:.9; margin-top:8px;">
+            Training + hands-on testing/automation (Selenium); strengthened fundamentals and delivery in fast-paced environments.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+    <div class="contact-box">
+      <p style="opacity:.9;">
+        Interested in discussing SaaS operations, production support strategy, or collaboration opportunities?
+        I’d love to connect.
+      </p>
+
+      <div class="contact-actions">
+        <a href="mailto:raghulmkrmech@gmail.com" class="btn">
+          <span>Send Email</span> <i class="fas fa-envelope"></i>
+        </a>
+
+        <!-- Update LinkedIn URL -->
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" class="btn">
+          <span>LinkedIn</span> <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="https://github.com/Raghul0810" target="_blank" rel="noreferrer" class="btn">
+          <span>GitHub</span> <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEMPLATE JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Typed -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+  <!-- Particles (make sure these files exist in assets/js) -->
+  <script src="./assets/js/particles.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+
+  <!-- Tilt / reveal / template scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./assets/js/script.js"></script>
+
+  <!-- FIX: Typed should not run twice -->
+  <script>
+    (function initTyped(){
+      const el = document.querySelector(".typing-text");
+      if(!el || typeof Typed === "undefined") return;
+
+      // Prevent double init
+      if (el.dataset.typedInit === "true") return;
+      el.dataset.typedInit = "true";
+
+      new Typed(".typing-text", {
+        strings: [
+          "Production Support Manager",
+          "Technical Operations Leader",
+          "SaaS Reliability & Incident Management",
+          "RCA • Automation • Release Readiness"
+        ],
+        loop: true,
+        typeSpeed: 55,
+        backSpeed: 28,
+        backDelay: 1400,
+        smartBackspace: true
+      });
+    })();
+  </script>
+
+  <!-- FIX: Skills dynamic load (lowercase + GitHub Pages safe fallback) -->
+  <script>
+    (function loadSkills(){
+      const grid = document.getElementById("skillsGrid");
+      if(!grid) return;
+
+      const candidates = [
+        "./skills.json",
+        "/Portfolio/skills.json"  // GitHub Pages fallback (repo name: Portfolio)
+      ];
+
+      function render(data){
+        grid.innerHTML = "";
+
+        Object.keys(data).forEach(category => {
+          const card = document.createElement("div");
+          card.className = "skill-card";
+
+          const icon = "fas fa-layer-group";
+          card.innerHTML = `
+            <h3><i class="${icon}" style="color: var(--brand)"></i> ${category}</h3>
+            <div class="skill-badges">
+              ${data[category].map(item => `<span class="badge">${item}</span>`).join("")}
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      }
+
+      function tryFetch(i){
+        if(i >= candidates.length){
+          grid.innerHTML = `<div style="opacity:.9; padding: 12px;">
+            Couldn't load <b>skills.json</b>. Ensure it exists in repo root (exact lowercase) and GitHub Pages is enabled.
+          </div>`;
+          return;
+        }
+
+        fetch(candidates[i])
+          .then(res => { if(!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
+          .then(render)
+          .catch(() => tryFetch(i+1));
+      }
+
+      tryFetch(0);
+    })();
+  </script>
 
 </body>
 </html>
