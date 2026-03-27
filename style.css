@@ -55,7 +55,7 @@ a{text-decoration:none;color:inherit}
 .timeline-card li,.panel li,.edu-card li{margin-bottom:10px}
 .skills-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 .panel,.cert-card,.rec-card,.edu-card,.contact-card{padding:24px;border-radius:26px}
-.panel li strong{color:var(--accent);font-weight:700;margin-right:6px;}
+.skills-panels .panel li strong{color:#66d9ff !important;font-weight:700;margin-right:6px;}
 .badge-grid{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
 .skill-badge{display:inline-flex;padding:12px 16px;border-radius:999px;font-weight:700;background:rgba(105,219,255,.12);border:1px solid rgba(105,219,255,.24);color:#dff8ff;animation:floatBadge 3s ease-in-out infinite}
 .skill-badge:nth-child(2n){animation-delay:.4s}.skill-badge:nth-child(3n){animation-delay:.8s}
